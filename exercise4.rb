@@ -1,24 +1,16 @@
 #FizzBuzz
 
-require 'benchmark'
-
-def fizzbuzz1
-  #begin_time = Time.now
-  (1..100).each do |x|
-    if x % 15 == 0
-      puts "BitMaker"
-    elsif x % 3 == 0
-      puts "Bit"
-    elsif x % 5 == 0
-      puts "Maker"
-    else
-      puts x
-    end
+(1..100).each do |x|
+  if x % 15 == 0
+    puts "BitMaker"
+  elsif x % 3 == 0
+    puts "Bit"
+  elsif x % 5 == 0
+    puts "Maker"
+  else
+    puts x
   end
 end
-#end_time = Time.now
-#puts begin_time - end_time
-fizzbuzz1
 
 #ALTERNATIVE SOLUTIONS
 def fizzbuzz2(n)
@@ -50,11 +42,3 @@ def fizzbuzz3
   end
 end
 #fizzbuzz3
-
-#TIMING ATTEMPTS
-
-# Benchmark.bm do |x|
-#   #x.report { 10.times { fizzbuzz1 } }
-#   #x.report { 10.times { (1..100).each { |x| puts fizzbuzz2(x) } } }
-#   #x.report { 10.times { fizzbuzz3 } }
-# end
